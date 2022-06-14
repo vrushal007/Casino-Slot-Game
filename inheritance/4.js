@@ -8,11 +8,11 @@ let func = function() {}; // 3 level from null (func.__proto__.__proto__.__proto
 // if x and y are non primitive
 // x == y -> true if and only if they are references to the same object in memory
 
-// console.log(str.__proto__.__proto__ == obj.__proto__); // true
-// console.log(num.__proto__.__proto__ == obj.__proto__); // true
-// console.log(bool.__proto__.__proto__ == obj.__proto__); // true
-// console.log(arr.__proto__.__proto__ == obj.__proto__); // true
-// console.log(func.__proto__.__proto__ == obj.__proto__); // true
+console.log(str.__proto__.__proto__ == obj.__proto__); // true
+console.log(num.__proto__.__proto__ == obj.__proto__); // true
+console.log(bool.__proto__.__proto__ == obj.__proto__); // true
+console.log(arr.__proto__.__proto__ == obj.__proto__); // true
+console.log(func.__proto__.__proto__ == obj.__proto__); // true
 
 //Everything indirectly inherits from same thing that obj inherits from
 //i.e. in Javascript, everything is essantially an object
