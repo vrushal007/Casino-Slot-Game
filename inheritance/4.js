@@ -20,3 +20,24 @@ console.log(func.__proto__.__proto__ == obj.__proto__); // true
 
 // console.log(obj.__proto__ == Object.prototype); // true
 // console.log(str.__proto__ == String.prototype); // true
+
+let x = Object.create(obj);
+console.log(str.charAt(2));
+console.log(typeof str.charAt); // function
+let str2 = 'zxcv'
+console.log(str.charAt == str2.charAt); // true -> it means both function referanced from the same place
+str.charAt = function() { return 'x' } // does not make any difference
+
+// str.__proto__==String.prototype => charAt fn exist here...
+
+String.prototype.charAt = function() { return 'x' } //now it will only return x
+console.log(str.charAt(1), str2.charAt(1))
+
+//String.prototype contains all default string function like charAt, indexOf etc...
+
+// Replace join function
+Array.prototype.joinOriginal = Array.prototype.join
+Array.prototype.join = function() {
+    console.log("join called on", this)
+    return this.joinOriginal(...arguments)
+}
