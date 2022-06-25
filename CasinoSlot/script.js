@@ -31,6 +31,7 @@ function updateAnimation(newSpeed) {
                 window.alert('You are the winner')
             }, 100)
         }
+
     }, 1000 / newSpeed)
 }
 inpSpeed.onchange = function(ev) {
