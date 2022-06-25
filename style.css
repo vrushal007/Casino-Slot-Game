@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --speed: 5;
+    --animc: infinite;
+    --animn: slotspin;
+    --delay: 0s;
+}
+
+.machine {
+    background-color: aquamarine;
+    border: dashed darkblue 2px;
+    height: 300px;
+    width: 900px;
+    margin: 50px;
+    display: flex;
+    z-index: 5;
+}
+
+.slot {
+    height: 250px;
+    width: 270px;
+    margin: 20px;
+    background-color: bisque;
+    border: solid black 1px;
+    text-align: center;
+    font-size: 100pt;
+    line-height: 250px;
+    z-index: 4;
+    overflow: hidden;
+}
+
+.slot>.value {
+    animation-name: var(--animn);
+    animation-iteration-count: var(--animc);
+    animation-duration: calc(1s/var(--speed));
+    animation-delay: var(--delay);
+    z-index: 5;
+}
+
+#inpSpeed {
+    font-size: 20pt;
+    margin-left: 50px;
+}
+
+.btn {
+    margin: 50px;
+    background-color: peru;
+    color: white;
+    font-size: 30pt;
+    padding: 50px;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: gray 10px 10px 10px;
+    transition: 0.8s;
+    display: flex;
+}
+
+.btn:hover {
+    transform: translate(-10px, -10px);
+    box-shadow: gray 20px 20px 20px;
+    transition: 0.5s;
+}
+
+.btn:active {
+    transform: translate(5px, 5px);
+    box-shadow: gray 5px 5px 3px;
+    transition: 0.2s;
+}
+
+@keyframes slotspin {
+    0% {
+        transform: translateY(-250px);
+    }
+    100% {
+        transform: translateY(250px);
+    }
+}
