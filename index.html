@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Casino slot</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon" />
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <script async defer src="script.js"></script>
+</head>
+
+<body>
+    <audio src="bgm.mp3" id="bgm" autoplay loop></audio>
+    <div class="nav">
+        <h1>Casino Slot Game</h1>
+        <div class="music">
+            <i class="lni lni-volume-medium m-btn" id="btnPlay"></i>
+            <i class="lni lni-volume-mute m-btn" id="btnMute"></i>
+        </div>
+    </div>
+    <div class="machine" onmousedown="return false" onselectstart="return false">
+        <div class="slot" id="slot1">
+            <div class="value" id="value1">X</div>
+        </div>
+        <div class="slot" id="slot2">
+            <div class="value" id="value2">X</div>
+        </div>
+        <div class="slot" id="slot3">
+            <div class="value" id="value3">X</div>
+        </div>
+    </div>
+    <form>
+        <label for="inpSpeed">Enter Speed :</label>
+        <input type="number" name="" id="inpSpeed" min="1" max="10" value="3">
+    </form>
+    <div class="container">
+        <div class="btn" id="btnStart" style="background-color: green;">
+            Start
+        </div>
+        <div class="btn" id="btnStop" style="background-color: red;">
+            Stop
+        </div>
+    </div>
+    <!-- <h2>Music</h2>
+    <div class="container">
+        <div class="btn" id="btnPlay" style="background-color: peru;">
+            Play
+        </div>
+        <div class="btn" id="btnMute" style="background-color: peru;">
+            Mute
+        </div>
+    </div> -->
+</body>
+
+</html>

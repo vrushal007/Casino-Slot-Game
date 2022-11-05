@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --speed: 5;
+    --animc: infinite;
+    --animn: slotspin;
+    --delay: 0s;
+    --transition1: -250px;
+    --transition2: 250px;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.music{
+    font-family: Helvetica;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.m-btn{
+    padding: 8px 12px 8px 12px;
+    margin: 20px;
+    background-color: peru;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+h1{
+    font-family: Helvetica;
+    font-weight: normal;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.machine {
+    background-color: #083454ab;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 2px gray;
+    border: 1px solid black;
+    height: 300px;
+    width: 900px;
+    margin: auto;
+    align-items: center;
+    display: flex;
+    z-index: 5;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.slot {
+    height: 250px;
+    width: 270px;
+    margin: 30px;
+    background-color: wheat;
+    border: solid  1px;
+    text-align: center;
+    font-size: 100pt;
+    line-height: 250px;
+    z-index: 4;
+    overflow: hidden;
+}
+
+.slot>.value {
+    animation-name: var(--animn);
+    animation-iteration-count: var(--animc);
+    animation-duration: calc(1s/var(--speed));
+    animation-delay: var(--delay);
+    z-index: 5;
+}
+
+form{
+    margin: auto;
+}
+
+label{
+    font-size: larger;
+    margin-right: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#inpSpeed {
+    width: 70px;
+    font-size: 20pt;
+    margin: auto;
+    margin-top: 30px;
+    height: 30px;
+    /* border: none; */
+    /* outline: none; */
+    /* border-style: none; */
+    
+}
+
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    font-weight: lighter;
+}
+
+.btn {
+    margin: 50px;
+    color: white;
+    font-size: 18pt;
+    padding: 10px 20px 10px 20px;
+    width: 50px;
+    border-radius: 7px;
+    box-shadow: 5px 5px 5px gray;
+    transition: 0.3s;
+    display: flex;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: gray 8px 8px 8px;
+    transition: 0.2s;
+}
+
+.btn:active {
+    transform: translate(3px, 3px);
+    box-shadow: gray 3px 3px 3px;
+    transition: 0.1s;
+}
+
+@keyframes slotspin {
+    0% {
+        transform: translateY(var(--transition1));
+    }
+    100% {
+        transform: translateY(var(--transition2));
+    }
+}
